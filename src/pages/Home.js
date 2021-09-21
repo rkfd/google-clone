@@ -1,27 +1,32 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
+import AppsIcon from '@material-ui/icons/Apps';
+import { Avatar } from '@material-ui/core';
+import Search from '../components/Search';
 
 function Home() {
   return (
     <div className='home'>
-      <h1>This is the HOMEPAGE!</h1>
-      
+
       <div className='home__header'>
         <div className='home__headerLeft'>
-          {/* Link */}
-          {/* Link */}
+          <Link to='/about'>About</Link>
+          <Link to='/store'>Store</Link>
         </div>
         <div className='home__headerRight'>
-          {/* Link */}
-          {/* Link */}
-          {/* Icon */}
-          {/* Avatar */}
+          <Link to='/gmail'>Gmail</Link>
+          <Link to='/images'>Images</Link>
+          <AppsIcon />
+          <Avatar />
         </div>
       </div>
 
       <div className='home__body'>
-
-
+        <img src='https://1000logos.net/wp-content/uploads/2021/05/Google-logo.png' alt='Google Logo' />
+        <div className='home__inputContainer'>
+          <Search />
+        </div>
       </div>
     </div>
   )
