@@ -1,9 +1,29 @@
+import React from 'react';
 import './App.css';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Hello, World!</h1>
+    <div className='app'>
+
+      <Router>
+
+        <Switch>
+
+          <Route path='/search'>
+            {/* <SearchPage /> */}
+            <h1>This is the Search Page!</h1>
+          </Route>
+
+          <Route path='/'>
+            <Home />
+          </Route>
+
+        </Switch>
+
+      </Router>
+      
     </div>
   );
 }
